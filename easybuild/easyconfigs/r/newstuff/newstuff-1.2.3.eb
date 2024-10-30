@@ -1,0 +1,28 @@
+easyblock = 'PythonPackage'
+
+name = 'newstuff'
+version = '1.2.3'
+
+homepage = 'https://github.com/stuff'
+description = '''Stuff and things'''
+
+toolchain = SYSTEM
+
+source_urls = ['https://pypi.python.org/packages/source/s/stuff']
+sources = ['ReFrame-HPC-%(version)s.tar.gz']
+checksums = ['ba6527f9036d7028d6af8d69e8e74603da239abd056e3b0cebac7ce8290a6e31']
+
+dependencies = [('setuptools', '41.0.1', '-py3')]
+
+download_dep_fail = True
+use_pip = False
+
+req_py_majver = 3
+req_py_minver = 5
+
+sanity_check_paths = {
+    'files': ['bin/reframe'],
+    'dirs': []
+}
+
+moduleclass = 'devel'
