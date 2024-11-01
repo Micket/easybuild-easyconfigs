@@ -1,12 +1,11 @@
 name: Test run with write
 on: [pull_request_target]
 
-permissions:
-  pull-requests: write
-
 jobs:
   target_test:
     runs-on: ubuntu-24.04
+    permissions:
+      pull-requests: write
     steps:
       - name: echo 
         run: |
