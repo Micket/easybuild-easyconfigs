@@ -11,6 +11,15 @@ jobs:
       with:
         fetch-depth: 0
 
+    - name: Check if file has changed
+      run: |
+        if git diff --name-only origin/${{ github.event.pull_request.base.ref }}...HEAD | grep -q .github/workflows/tagbot.py; then
+          echo "tagbot_modified=true" >> $GITHUB_ENV
+        else
+          echo "tagbot_modified=false" >> $GITHUB_ENV
+        fi
+
+
     - name: set up Python
       uses: actions/setup-python@v5
       with:
