@@ -10,7 +10,7 @@ import difflib
 from datetime import datetime
 from pathlib import Path
 
-
+# DELETE EVERYTHING
 def get_first_commit_date(repo, file_path):
     commits = list(repo.iter_commits(paths=file_path))
     if commits:
