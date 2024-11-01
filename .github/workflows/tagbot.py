@@ -54,6 +54,8 @@ def pr_ecs(pr_diff):
     return new_ecs, changed_ecs
 
 
+print("Teehee i'm doing evil stuff")
+
 GITHUB_API_URL = 'https://api.github.com'
 event_path = os.getenv("GITHUB_EVENT_PATH")
 token = os.getenv("GH_TOKEN")
