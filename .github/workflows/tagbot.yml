@@ -14,8 +14,8 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-#    - name: Debug
-#      run: echo "group: ${{ github.workflow }}"
+    - name: Debug
+      run: echo "group: ${{ github.workflow }}"
 
 #    - name: Debug2
 #      run: echo "group: ${{ github.head_ref }}"
