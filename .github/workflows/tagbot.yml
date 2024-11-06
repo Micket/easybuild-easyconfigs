@@ -15,7 +15,7 @@ jobs:
       pull-requests: write
     steps:
     - name: Debug
-      run: echo "group: ${{ github.workflow }}"
+      run: echo "group test"
 
 #    - name: Debug2
 #      run: echo "group: ${{ github.head_ref }}"
