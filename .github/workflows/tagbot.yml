@@ -15,7 +15,13 @@ jobs:
       pull-requests: write
     steps:
     - name: Debug
-      run: echo "group: ${{ github.workflow }}-${{ github.ref }}"
+      run: echo "group: ${{ github.workflow }}"
+
+    - name: Debug2
+      run: echo "group: ${{ github.head_ref }}"
+
+    - name: Debug3
+      run: echo "group: ${{ github.event.pull_request.number }}"
 
     - name: Checkout base branch for workflow scripts
       uses: actions/checkout@v4
